@@ -1,0 +1,19 @@
+{{!< default}}
+
+<div class="gh-outer">
+    <main class="site-main gh-inner">
+        <div class="post-feed gh-feed">
+            {{#get "tags"}}
+                {{#foreach tags}}
+                   <article class="{{post_class}} u-shadow">
+                    <div class="post-wrapper">
+                    <a class="post-link" href="{{url}}" class="tag"{{#if accent_color}} style="color: {{accent_color}};"{{/if}}>
+                        {{name}}
+                    </a>    
+                    </div>
+                    </article>
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </main>
+</div>
